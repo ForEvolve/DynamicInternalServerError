@@ -1,7 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
+    
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>Carl-Hugo Marcotte</Authors>
+    <Company>ForEvolve</Company>
+    <Description>ASP.NET Core WebAPI dynamic internal server error filter.</Description>
+    <PackageProjectUrl>https://github.com/ForEvolve/DynamicInternalServerError</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ForEvolve/DynamicInternalServerError/blob/master/LICENSE</PackageLicenseUrl>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0-upsilon-00000</Version>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Carl-Hugo Marcotte</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
   </PropertyGroup>
 
 </Project>
