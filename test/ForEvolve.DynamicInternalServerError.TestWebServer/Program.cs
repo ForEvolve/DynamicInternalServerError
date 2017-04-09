@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ForEvolve.DynamicInternalServerError.TestWebServer
 {
@@ -16,6 +17,10 @@ namespace ForEvolve.DynamicInternalServerError.TestWebServer
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .ConfigureServices(x =>
+                {
+                    x.AddSingleton<Exception>(new NotImplementedException());
+                })
                 .Build();
 
             host.Run();
