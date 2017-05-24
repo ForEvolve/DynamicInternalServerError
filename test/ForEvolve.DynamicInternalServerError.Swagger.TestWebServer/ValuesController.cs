@@ -27,6 +27,7 @@ namespace ForEvolve.DynamicInternalServerError.Swagger.TestWebServer
 
         // POST api/values
         [HttpPost]
+        [ProducesResponseType(400)]
         public void Post([FromBody]string value)
         {
             throw new NotImplementedException();

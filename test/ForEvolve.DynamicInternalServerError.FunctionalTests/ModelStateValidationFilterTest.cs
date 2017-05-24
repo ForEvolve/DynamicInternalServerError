@@ -29,7 +29,7 @@ namespace ForEvolve.DynamicInternalServerError
         }
 
         [Fact]
-        public async Task SomeModelWithOneProperty_should()
+        public async Task SomeModelWithOneProperty_should_return_ErrorResponse()
         {
             // Arrange
             var model = new SomeModelWithOneProperty();
@@ -41,10 +41,12 @@ namespace ForEvolve.DynamicInternalServerError
             // Assert
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
             Assert.NotNull(responseString);
+            var obj = JsonConvert.DeserializeObject<ErrorResponse>(responseString);
+            Assert.NotNull(obj);
         }
 
         [Fact]
-        public async Task SomeModelWithMultipleProperties_should()
+        public async Task SomeModelWithMultipleProperties_should_return_ErrorResponse()
         {
             // Arrange
             var model = new SomeModelWithMultipleProperties();
@@ -56,6 +58,8 @@ namespace ForEvolve.DynamicInternalServerError
             // Assert
             Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
             Assert.NotNull(responseString);
+            var obj = JsonConvert.DeserializeObject<ErrorResponse>(responseString);
+            Assert.NotNull(obj);
         }
     }
 }

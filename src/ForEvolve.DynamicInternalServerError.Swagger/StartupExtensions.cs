@@ -13,12 +13,14 @@ namespace System
         public static IServiceCollection AddDynamicInternalServerErrorSwagger(this IServiceCollection services)
         {
             services.TryAddSingleton<DynamicInternalServerErrorOperationFilter>();
+            services.TryAddSingleton<DynamicValidationActionOperationFilter>();
             return services;
         }
 
         public static SwaggerGenOptions AddDynamicInternalServerError(this SwaggerGenOptions options)
         {
             options.OperationFilter<DynamicInternalServerErrorOperationFilter>();
+            options.OperationFilter<DynamicValidationActionOperationFilter>();
             return options;
         }
     }
