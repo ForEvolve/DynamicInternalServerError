@@ -1,5 +1,7 @@
-# DynamicInternalServerError
-A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 1.6, that translate Exceptions to JSON automatically.
+# Dynamic InternalServerError
+A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 1.6, that translate Exceptions (status code 500) to JSON automatically.
+
+Validation errors are also translated automatically, following the same convention, for response with status code 400.
 
 [![forevolve MyGet Build Status](https://www.myget.org/BuildSource/Badge/forevolve?identifier=f930b44e-be3e-4249-8992-de5ac7bb7e1f)](https://www.myget.org/)
 
@@ -25,3 +27,51 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 Thats it, now exceptions are translated to JSON.
+
+## How to add Swagger support
+In the `ConfigureServices` method, you must add `services.AddDynamicInternalServerErrorSwagger();`.
+In the `services.AddSwaggerGen(c => { ... })` you must register swagger operation filters by calling `c.AddDynamicInternalServerError();`.
+
+```CSharp
+public void ConfigureServices(IServiceCollection services)
+{
+    // Add DynamicInternalServerError
+    services.AddDynamicInternalServerError();
+    services.AddDynamicInternalServerErrorSwagger();
+
+    // Add framework services.
+    services.AddMvc(options =>
+    {
+        options.ConfigureDynamicInternalServerError();
+    });
+    
+    // Add and configure Swagger.
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+
+        // Add and configure DynamicInternalServerError.
+        c.AddDynamicInternalServerError();
+    });
+}
+```
+
+## Dynamic Validation
+`DynamicValidationActionFilter` translates `BadRequestObjectResult` that has a value of type `SerializableError` to an `ErrorResponse` object, following the same convention as `DynamicValidationActionFilter` do. 
+
+### How to use
+By default, by registering `DynamicInternalServerError` you also register `DynamicValidation`.
+Return `BadRequest(ModelState);` in a controller action. To define `ErrorResponse` automatically in the swagger definition file, simply decorat the action with `[ProducesResponseType(400)]` (do not specify a type).
+
+```CSharp
+[HttpPost]
+[ProducesResponseType(400)]
+public IActionResult Post([FromBody]string value)
+{
+    if(!ModelState.IsValid)
+    {
+        return BadRequest(ModelState);
+    }
+    // ...
+}
+```
