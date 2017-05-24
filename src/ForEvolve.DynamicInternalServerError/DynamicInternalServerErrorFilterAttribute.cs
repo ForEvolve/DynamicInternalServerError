@@ -38,6 +38,7 @@ namespace ForEvolve.DynamicInternalServerError
 
             base.OnException(context);
         }
+
         protected virtual IActionResult CreateActionResult(ExceptionContext context)
         {
             var error = ErrorFactory.CreateErrorFor(context.Exception);

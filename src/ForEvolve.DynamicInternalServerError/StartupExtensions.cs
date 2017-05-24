@@ -8,7 +8,6 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using ForEvolve.DynamicInternalServerError;
-using ForEvolve.DynamicInternalServerError;
 using Microsoft.Extensions.Logging;
 
 namespace System
@@ -27,6 +26,7 @@ namespace System
         {
             // Register DynamicInternalServerErrorFilterAttribute with MVC
             options.Filters.Add(typeof(DynamicInternalServerErrorFilterAttribute));
+            options.Filters.Add(typeof(DynamicValidationActionFilter));
             return options;
         }
     }

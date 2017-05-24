@@ -1,4 +1,5 @@
 ﻿using ForEvolve.DynamicInternalServerError.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 
 namespace ForEvolve.DynamicInternalServerError
@@ -7,5 +8,6 @@ namespace ForEvolve.DynamicInternalServerError
     {
         Error CreateErrorFor<TException>(TException ex)
             where TException : Exception;
+        Error CreateErrorFor(SerializableError serializableError);
     }
 }
