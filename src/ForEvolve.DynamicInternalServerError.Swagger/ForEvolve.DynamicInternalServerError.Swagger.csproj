@@ -18,7 +18,7 @@
     <IncludeSource>True</IncludeSource>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0-rc3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ForEvolve.DynamicInternalServerError\ForEvolve.DynamicInternalServerError.csproj" />
