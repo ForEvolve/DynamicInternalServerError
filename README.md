@@ -3,7 +3,7 @@ A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 
 
 Validation errors are also translated automatically, following the same convention, for response with status code 400.
 
-[![forevolve MyGet Build Status](https://www.myget.org/BuildSource/Badge/forevolve?identifier=f930b44e-be3e-4249-8992-de5ac7bb7e1f)](https://www.myget.org/)
+[![forevolve MyGet Build Status](https://www.myget.org/BuildSource/Badge/forevolve?identifier=a6353d8a-cc43-4e21-b226-c2ca715205ab)](https://www.myget.org/)
 
 The error model is based on: [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md#7102-error-condition-responses).
 
