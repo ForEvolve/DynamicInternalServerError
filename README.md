@@ -9,6 +9,8 @@ The error model is based on: [Microsoft REST API Guidelines](https://github.com/
 
 *This is a work in progress.*
 
+ForEvolve [NuGet V3 feed URL](https://www.myget.org/F/forevolve/api/v3/index.json) packages source. See the [Table of content](https://github.com/ForEvolve/Toc) project for more info.
+
 ## How to use
 In your `Startup` class, you must `AddDynamicInternalServerError()` to add dependencies and `ConfigureDynamicInternalServerError()` to add the filter to MVC.
 
