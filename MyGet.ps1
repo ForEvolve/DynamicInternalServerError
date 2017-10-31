@@ -1,7 +1,6 @@
 param(
     [Alias('v')]
     [string]$PackageVersion = $env:PackageVersion,
-    # [string]$ConfigFile = '../../NuGet.config',
     [Alias('c')]
     [string]$Configuration = $env:Configuration
 ) 
@@ -11,10 +10,6 @@ $TraceColor = 'DarkCyan'
 Write-Host 'dotnet clean starting' -foregroundcolor $TraceColor
 dotnet clean
 Write-Host 'dotnet clean completed' -foregroundcolor $TraceColor
-
-# Write-Host 'dotnet restore starting' -foregroundcolor $TraceColor
-# dotnet restore --configfile $ConfigFile /p:PackageVersion=$PackageVersion
-# Write-Host 'dotnet restore completed' -foregroundcolor $TraceColor
 
 Write-Host 'dotnet build starting' -foregroundcolor $TraceColor
 dotnet build -c $Configuration /p:PackageVersion=$PackageVersion
