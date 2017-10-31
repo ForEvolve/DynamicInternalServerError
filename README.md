@@ -1,5 +1,5 @@
 # Dynamic InternalServerError
-A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 1.6, that translate Exceptions (status code 500) to JSON automatically.
+A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 1.6 and Asp.Net Core 2.0, that translate Exceptions (status code 500) to JSON automatically.
 
 Validation errors are also translated automatically, following the same convention, for response with status code 400.
 
