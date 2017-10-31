@@ -1,4 +1,4 @@
-﻿using ForEvolve.DynamicInternalServerError.Models;
+﻿using ForEvolve.Api.Contracts.Errors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;

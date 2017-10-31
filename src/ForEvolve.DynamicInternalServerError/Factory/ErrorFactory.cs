@@ -1,4 +1,4 @@
-﻿using ForEvolve.DynamicInternalServerError.Models;
+﻿using ForEvolve.Api.Contracts.Errors;
 using System;
 using System.Collections.Generic;
 using System.Text;

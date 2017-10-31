@@ -18,11 +18,16 @@
     <IncludeSource>True</IncludeSource>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <!--<PackageReference Include="Newtonsoft.Json" Version="10.0.2" />-->
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="1.1.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="1.1.4" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="1.1.2" />
-
+  </ItemGroup>
+  <ItemGroup Condition="'$(MetaPackagePackageReferenceVersion)' == ''">
+    <PackageReference Include="ForEvolve.Api.Contracts" Version="1.0.0-upsilon-*" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(MetaPackagePackageReferenceVersion)' != ''">
+    <PackageReference Include="ForEvolve.Api.Contracts" Version="$(MetaPackagePackageReferenceVersion)" />
   </ItemGroup>
 </Project>

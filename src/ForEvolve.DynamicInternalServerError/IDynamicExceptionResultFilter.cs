@@ -1,4 +1,4 @@
-﻿using ForEvolve.DynamicInternalServerError.Models;
+﻿using ForEvolve.Api.Contracts.Errors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;

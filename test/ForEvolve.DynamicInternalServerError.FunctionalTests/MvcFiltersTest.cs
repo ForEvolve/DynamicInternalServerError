@@ -1,4 +1,4 @@
-using ForEvolve.DynamicInternalServerError.Models;
+using ForEvolve.Api.Contracts.Errors;
 using ForEvolve.DynamicInternalServerError.TestWebServer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
