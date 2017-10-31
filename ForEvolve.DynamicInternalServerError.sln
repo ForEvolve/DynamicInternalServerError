@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7970D254-90ED-41D5-9FF9-ECA2647DEF3F}"
 EndProject
@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.DynamicInternalSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.DynamicInternalServerError.Swagger.Tests", "test\ForEvolve.DynamicInternalServerError.Swagger\ForEvolve.DynamicInternalServerError.Swagger.Tests.csproj", "{BF7DB27E-2A06-4DDE-B157-F7974F010EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.DynamicInternalServerError.TestWebServer", "test\ForEvolve.DynamicInternalServerError.TestWebServer\ForEvolve.DynamicInternalServerError.TestWebServer.csproj", "{2BE3BE1B-5F7E-415C-8170-325BBF1159CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.DynamicInternalServerError.TestWebServer", "test\ForEvolve.DynamicInternalServerError.TestWebServer\ForEvolve.DynamicInternalServerError.TestWebServer.csproj", "{2BE3BE1B-5F7E-415C-8170-325BBF1159CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5BB42C92-6C6F-4A5C-92E0-24D31239FC1C}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunctionalTests", "Function
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{70DE65A9-83E3-4E78-84F8-FECC32208840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.DynamicInternalServerError.Swagger.TestWebServer", "test\ForEvolve.DynamicInternalServerError.Swagger.TestWebServer\ForEvolve.DynamicInternalServerError.Swagger.TestWebServer.csproj", "{C4D5425C-29E1-45A5-B053-E5EFE66DCCEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.DynamicInternalServerError.Swagger.TestWebServer", "test\ForEvolve.DynamicInternalServerError.Swagger.TestWebServer\ForEvolve.DynamicInternalServerError.Swagger.TestWebServer.csproj", "{C4D5425C-29E1-45A5-B053-E5EFE66DCCEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,5 +139,8 @@ Global
 		{9991BC3C-F6DA-4E5A-84D2-C6F2E79DF8BB} = {71772B4A-1D98-4F31-9AEB-12888598D453}
 		{70DE65A9-83E3-4E78-84F8-FECC32208840} = {71772B4A-1D98-4F31-9AEB-12888598D453}
 		{C4D5425C-29E1-45A5-B053-E5EFE66DCCEC} = {9991BC3C-F6DA-4E5A-84D2-C6F2E79DF8BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65CD29C4-C161-4F2C-B766-DD440AADE798}
 	EndGlobalSection
 EndGlobal
