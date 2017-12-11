@@ -1,3 +1,6 @@
+# Project has been moved
+This project has been moved in the [ForEvolve-Framework](https://github.com/ForEvolve/ForEvolve-Framework) repository.
+
 # Dynamic InternalServerError
 A dynamic internal server error filter for ASP.NET Core, targetting NetStandard 1.6 and Asp.Net Core 2.0, that translate Exceptions (status code 500) to JSON automatically.
 
